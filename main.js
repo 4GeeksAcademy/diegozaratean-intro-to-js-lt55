@@ -1,99 +1,105 @@
-console.log('hoal desde mainjs')
-
-console.log(1)
-console.log(2)
-console.log(3)
-console.log(4)
-console.log(5)
 
 
-// for(inicializacion;condicion;actualización){}
-// i = 0 , 0 <= 5 ======> 0
-// i = 1 , 1 <= 5 ======> 1
-// i = 2 , 2 <= 5 ======> 2
-// i = 3 , 3 <= 5 ======> 3
-// i = 4 , 4 <= 5 ======> 4
-// i = 5 , 5 <= 5 ======> 5
-// i = 6 , 6 <= 5 
 
-for( i = 0; i < 5;i++){
-    console.log(i + 1)
+// transportar
+// argumentos
+// function transportar(origen,destino){
+//     console.log('saliendo de ' + origen)
+//     console.log('moviendome')
+//     console.log('llegando a ' + destino)
+// }
+
+// transportar('casa','gym')
+// transportar('gym','ofi')
+// transportar('ofi','casa')
+
+
+// SCOPE
+// let nombre = 'Bob esponja'
+// console.log('Antes de la función' + nombre)
+
+// function saludarAlumno(nombre ){
+//     console.log('dentro de la función' + nombre)
+//     console.log('hola ' +  nombre)
+// }
+// console.log('despues de la función' + nombre)
+// saludarAlumno('Yilfri')
+
+// function sumar(a,b){
+//     console.log('suma')
+//     return a + b
+// }
+
+// console.log(sumar(2,3))
+
+// función admitido e un bar
+// function admitido(edad){
+//     if(edad > 17){
+//         console.log('hola4')
+//         return'puedes entrar'
+//         console.log('hola1')
+//     }else{
+//         console.log('hola3')
+//         return 'tienes que esperar'
+//         console.log('hola2')
+//     }
+// }
+
+// console.log(admitido(15))
+
+// caularTax el 20%
+function calcularTax(income){
+    return income * 0.2
 }
 
 
+document.getElementById('tax').innerText = calcularTax(100)
 
 
+// function sume(a,b){
+//     return  a + b
+// }
 
+// console.log(sume(2,2)) // 4
+// console.log(sume(2,5)) // 7
+// console.log(sume(8,0)) // 8
+// console.log(sume(6,3)) // 9
 
-for(i = 20;i >= 15; i--){
-    console.log(i)
-    
+// console.log('ANTES window onload')
+// window.onload = function(){
+//     console.log('Se ejecuto window onload')
+// }
+// console.log('DESPUES window onload')
+
+// FUNCIONES DECLARATIVAS
+saludoDeclarativo()
+function saludoDeclarativo(){
+    console.log('saludoDeclarativo')
 }
 
-// i++ =====> i= i + 1
-// i-- =====> i= i - 1
-//i+=5. =====> i = i + 5
-for(i=30;i <= 50;i = i + 5){
-    console.log(i)
+
+// FUNCIONES DE EXPRESI´ON
+const saludoExpresion = function(){
+    console.log('saludoExpresion')
 }
+saludoExpresion()
 
-let nombres = ['dakota johnson','jena ortega','scarlet johanson']
-
-console.log(nombres)
-nombres.push('henry cavil')
-console.log(nombres)
-
-
-const alumnos = ['nicolas','elkin','luis']
-
-console.log(alumnos)
-alumnos.push('yilfri')
-console.log(alumnos)
-
-// length.        1.     2.        3
-let frutas = ['igo','sandia','frutilla', 'coco', 'uva', 'mango']
-// index,posiiton. 0.      1.       2
-
-console.log(frutas)
-console.log(frutas[1])
-
-frutas.push('mango')
-console.log(frutas)
-
-frutas.pop()
-console.log(frutas)
-
-frutas.shift()
-console.log(frutas)
-
-frutas.unshift('naranja')
-console.log(frutas)
-
-frutas.splice(1,1)
-console.log(frutas)
-
-frutas.splice(1,1)
-console.log(frutas)
-
-
-frutas.splice(2,1)
-console.log(frutas)
-
-
-frutas = [ "naranja", "frutilla", "coco", "uva", "mango" , 'fresa']
-console.log(frutas)
-console.log('QUEMADO')
-console.log(frutas[5] + 's')
-console.log(frutas[4] + 's')
-console.log(frutas[3] + 's')
-console.log(frutas[2] + 's')
-console.log(frutas[1] + 's')
-console.log(frutas[0] + 's')
-
-
-console.log('DINAMICO')
-
-console.log(frutas)
-for(i = frutas.length -1; i >= 0;i--){
-    console.log(frutas[i] + 's')
+// FUNCIONES DE FLECHA ARROW
+const saludoFlecha = ()=>{
+    console.log('saludoFlecha')
+    //this
 }
+saludoFlecha()
+
+
+//// REFACTORING
+
+/// PSEUDOCODIGO
+// desarrollar un generador de excusas de Quien, Cuando, Que , Donde
+// 1. modificar html desde js
+// 2. tomar un arraqy de Quien y de forma aletoria traer un elemento
+// 3. tomar un arraqy de Cuando y de forma aletoria traer un elemento
+// 4. tomar un arraqy de Que y de forma aletoria traer un elemento
+// 5. tomar un arraqy de Donde y de forma aletoria traer un elemento
+// 6. tomar los elementos aletorios y formas una frase
+// 7. darle estilos
