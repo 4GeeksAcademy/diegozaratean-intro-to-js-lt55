@@ -1,105 +1,129 @@
 
+// Array
+// Mario
+// Luigi
+// Bowser
+// Toad
+// Peach
+
+let personajes = ['Mario','Luigi','Bowser','Toad','Peach','star']
+
+console.log(personajes)
 
 
-// transportar
-// argumentos
-// function transportar(origen,destino){
-//     console.log('saliendo de ' + origen)
-//     console.log('moviendome')
-//     console.log('llegando a ' + destino)
-// }
+console.log(personajes[0])
+console.log(personajes[1])
+console.log(personajes[2])
+console.log(personajes[3])
+console.log(personajes[4])
 
-// transportar('casa','gym')
-// transportar('gym','ofi')
-// transportar('ofi','casa')
-
-
-// SCOPE
-// let nombre = 'Bob esponja'
-// console.log('Antes de la función' + nombre)
-
-// function saludarAlumno(nombre ){
-//     console.log('dentro de la función' + nombre)
-//     console.log('hola ' +  nombre)
-// }
-// console.log('despues de la función' + nombre)
-// saludarAlumno('Yilfri')
-
-// function sumar(a,b){
-//     console.log('suma')
-//     return a + b
-// }
-
-// console.log(sumar(2,3))
-
-// función admitido e un bar
-// function admitido(edad){
-//     if(edad > 17){
-//         console.log('hola4')
-//         return'puedes entrar'
-//         console.log('hola1')
-//     }else{
-//         console.log('hola3')
-//         return 'tienes que esperar'
-//         console.log('hola2')
-//     }
-// }
-
-// console.log(admitido(15))
-
-// caularTax el 20%
-function calcularTax(income){
-    return income * 0.2
+console.log('EFICIENTE')
+for(i=personajes.length -1 ; i >= 0; i--){
+    console.log(personajes[i])
 }
 
 
-document.getElementById('tax').innerText = calcularTax(100)
 
 
-// function sume(a,b){
-//     return  a + b
-// }
 
-// console.log(sume(2,2)) // 4
-// console.log(sume(2,5)) // 7
-// console.log(sume(8,0)) // 8
-// console.log(sume(6,3)) // 9
 
-// console.log('ANTES window onload')
-// window.onload = function(){
-//     console.log('Se ejecuto window onload')
-// }
-// console.log('DESPUES window onload')
 
-// FUNCIONES DECLARATIVAS
-saludoDeclarativo()
-function saludoDeclarativo(){
-    console.log('saludoDeclarativo')
+
+
+
+
+let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+let numbers2 = [1,2,3]
+
+console.log(numbers)
+// i =  i + 1 ======> i++
+// i =  i + 3 ======> i+=3
+for(i=0; i < 20; i+=3){
+    console.log(numbers[i])
 }
 
 
-// FUNCIONES DE EXPRESI´ON
-const saludoExpresion = function(){
-    console.log('saludoExpresion')
+
+
+let personajesBuenos = []
+for(i=0; i < personajes.length;i++){
+    if(personajes[i] != 'Bowser'){
+        personajesBuenos.push(personajes[i])
+    }
 }
-saludoExpresion()
 
-// FUNCIONES DE FLECHA ARROW
-const saludoFlecha = ()=>{
-    console.log('saludoFlecha')
-    //this
+
+console.log(personajes)
+console.log(personajesBuenos)
+
+// let personajesFiltrados = personajes.filter( (personaje)=> personaje != 'Bowser')
+console.log(personajes.filter( (personaje)=> personaje != 'Bowser'))
+
+
+console.log(numbers)
+console.log(numbers.filter( (number)=> number != 7 ))
+console.log(numbers.filter( (number)=> number % 3 == 0 ))
+console.log(numbers.filter( (number)=> number > 7 ))
+console.log(numbers.filter( (number)=> number < 15 ))
+
+console.log(numbers.filter( (number)=> number > 7 && number < 15 ))
+
+let newNumbers = []
+// i = 0 =====> 
+for(i = 0 ;i <= 19 ;i++){
+    console.log(numbers[i] * 4)
+    newNumbers.push(numbers[i] * 4)
 }
-saludoFlecha()
+
+console.log(numbers)
+console.log(newNumbers)
+
+// let mapNumbers = numbers.map( (item)=> item * 4)
+
+console.log(numbers)
+console.log(numbers.map( (item)=> item * 4))
 
 
-//// REFACTORING
 
-/// PSEUDOCODIGO
-// desarrollar un generador de excusas de Quien, Cuando, Que , Donde
-// 1. modificar html desde js
-// 2. tomar un arraqy de Quien y de forma aletoria traer un elemento
-// 3. tomar un arraqy de Cuando y de forma aletoria traer un elemento
-// 4. tomar un arraqy de Que y de forma aletoria traer un elemento
-// 5. tomar un arraqy de Donde y de forma aletoria traer un elemento
-// 6. tomar los elementos aletorios y formas una frase
-// 7. darle estilos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log(personajes)
+console.log(personajes.map( (personaje)=> personaje + "s" ))
+
+
+personajes.forEach( (item)=>{
+    console.log(item)
+})
+
+// 5,10 , 15 ,20
+
+numbers.forEach( (item)=>{
+    console.log('se ejecuto el proceso')
+    if(item%5 ==0){
+
+        console.log(item)
+    }
+})
+
+for(i=4; i < numbers.length;i+=5){
+    console.log('se ejecuto el proceso')
+    console.log(numbers[i])
+}
+ console.log('DO WHILE')
+let j = 20
+do{
+    console.log(j)
+    j++
+}while(j < 10)
