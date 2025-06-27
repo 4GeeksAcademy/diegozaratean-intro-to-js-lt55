@@ -1,31 +1,56 @@
-// hacer un app que calcule el impuesto si ganas menos de 1000 debes imprimir "debes pagar el 5%"
-// si ganas mas de 1000 debes imprimir "debes pagar el 10%", el sueldo esta defnido 
 
 
+let persona = {
+    nombre: 'german',
+    apellido: 'perez',
+    edad: 32,
+    skills: ['js','python','react'],
+    programar: function(){
+        console.log('estoy programando')
+    }
+}
+
+let arrayEjemplo = ['german','perez',32]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///  Perro, nombre, color, edad, ladrar wow
+let perro = {
+    nombre: 'luna',
+    color: 'blanco con negro',
+    edad: 1,
+    ladrar: function(){
+        console.log('Wow soy ' )
+    }
+
+}
+
+
+
+/// Agregar una funcion que cambie el texto y el color de fonod del titulo, cunado le douy click a un boton
 // PSEUDOCODIGO
-// definir mi variabel de sueldo
-let sueldo = 100
-// let mensaje = ''
-// if(sueldo < 1000){
-//     mensaje = "debes pagar el 5%"
-// }else{
-//     mensaje ="debes pagar el 10%"
-// }
-
-// ternary operator
-// if(condicion){
-    // si es true
-    //}else{
-        // si es false que ghagio
-        //}
-        
-// (condicion) ? si es true: si es false ; 
-let mensaje =  sueldo < 1000 ? "debes pagar el 5%" :  "debes pagar el 10%"
-console.log(mensaje)
-
-document.getElementById('content').insertAdjacentHTML(
-    'beforeend',
-    `<p>ya te voy a decir $100</p> <b>${mensaje}</b>`
-)
-
+// DONE: hacer una funcion
+function modificarTitulo(){
+    console.log('modificarTitulo')
+    // cambiar texto del titulo
+    document.getElementById('title').innerText = 'buen viernes' 
+    // cambiar color de fondo del titulo
+    document.getElementById('title').style.backgroundColor = 'yellow' 
+}
+// modificarTitulo()
+// DONE: agergar un boton
+// DONE:cuando le de click al boton hacer algo
 
