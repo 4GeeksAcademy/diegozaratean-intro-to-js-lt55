@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bievenidos a Js</title>
+
+    <style>
+        .dado{
+            width: 100px;
+            height: 100px;
+            display: block;
+            border: 1px solid #000;
+            font-size: 60px;
+            text-align: center;
+            line-height: 100px;
+            border-radius: 15px;
+            box-shadow: 6px 5px 15px;
+        }
+    </style>
 </head>
 <body>
      <h1>Bievenidos a Js 👨🏼‍💻</h1>
@@ -17,6 +31,12 @@
      <p class="text"> text3</p>
      
      <button onclick="modificarTitulo()">cambiar titulo</button>
+     <br><br><br><br>
+     <div>
+        <p>Dado 1: <span class="dado" id="dado1">0</span></p>
+        <p>Dado 2: <span class="dado" id="dado2">0</span></p>
+        <button onclick="lanzarDados()" id="btnlanzar">Lanzar dados</button>
+     </div>
 
      <script>
         console.log('hola de index')
