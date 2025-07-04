@@ -9,6 +9,8 @@
         .dado{
             width: 100px;
             height: 100px;
+            min-height: 100px;
+            min-width: 100px;
             display: block;
             border: 1px solid #000;
             font-size: 60px;
@@ -37,6 +39,17 @@
         <p>Dado 2: <span class="dado" id="dado2">0</span></p>
         <button onclick="lanzarDados()" id="btnlanzar">Lanzar dados</button>
      </div>
+
+     <br><br>
+
+     <div>
+        <label for="alto">Alto</label>
+        <input type="number" id="alto" placeholder="ingresa el alto">
+        <label for="ancho">Ancho</label>
+        <input type="number" id="ancho" placeholder="ingresa el ancho">
+        <button onclick="changeSize()" >Redimensionar</button>
+     </div>
+     
 
      <script>
         console.log('hola de index')

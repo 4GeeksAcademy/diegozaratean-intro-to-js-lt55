@@ -71,3 +71,25 @@ function lanzarDados(){
     document.getElementById('dado2').innerText =  Math.ceil( Math.random() * 6) 
 }
 lanzarDados()
+
+
+
+
+// PSEUDOCODIGO
+// un programa que cambie la dimensiones de los dados por medio de dos inputs
+function changeSize(){
+    let alto = document.getElementById('alto').value 
+    let ancho = document.getElementById('ancho').value 
+    document.getElementById('dado1').style.height = alto + 'px'
+    document.getElementById('dado2').style.height = alto + 'px'
+    document.querySelector('#dado1').style.width = ancho + 'px'
+    document.querySelector('#dado2').style.width = ancho + 'px'
+}
+
+
+
+
+setInterval(lanzarDados, 3000);
+
+
+
